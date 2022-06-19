@@ -1,0 +1,56 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "0c4ddf70-a894-42bb-a82c-31b340f897e0": {
+      "ProjectGuid": "0c4ddf70-a894-42bb-a82c-31b340f897e0",
+      "DisplayName": "Resources",
+      "ColorIndex": 0
+    },
+    "6a3ecb2b-7f0d-45a6-b7de-71260d96639b": {
+      "ProjectGuid": "6a3ecb2b-7f0d-45a6-b7de-71260d96639b",
+      "DisplayName": "Turnit.GenericStore.Api",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "38507849-871c-4379-b1e2-10d1d730a8fd": {
+      "ProjectGuid": "38507849-871c-4379-b1e2-10d1d730a8fd",
+      "DisplayName": "Turnit",
+      "ColorIndex": 2
+    },
+    "bb3c90d5-7e08-42f5-bcdd-74d6794f04a0": {
+      "ProjectGuid": "bb3c90d5-7e08-42f5-bcdd-74d6794f04a0",
+      "DisplayName": "Turnit.Abstraction",
+      "ColorIndex": 3
+    },
+    "38db2580-b7c2-498a-996f-219921f5a264": {
+      "ProjectGuid": "38db2580-b7c2-498a-996f-219921f5a264",
+      "DisplayName": "Turnit.Database",
+      "ColorIndex": 4
+    },
+    "71d442cd-c4ba-44f2-b76f-df31f7928a36": {
+      "ProjectGuid": "71d442cd-c4ba-44f2-b76f-df31f7928a36",
+      "DisplayName": "Turnit.Service",
+      "ColorIndex": 5
+    },
+    "fd900f1c-c7c0-4bda-ba91-d6a14a1025dc": {
+      "ProjectGuid": "fd900f1c-c7c0-4bda-ba91-d6a14a1025dc",
+      "DisplayName": "Turnit.Common",
+      "ColorIndex": 6
+    },
+    "99a10182-3c53-4ce0-8496-191b7d08ecd2": {
+      "ProjectGuid": "99a10182-3c53-4ce0-8496-191b7d08ecd2",
+      "DisplayName": "Test",
+      "ColorIndex": 7
+    },
+    "ee0970ac-8004-42bf-a83f-43649a12a155": {
+      "ProjectGuid": "ee0970ac-8004-42bf-a83f-43649a12a155",
+      "DisplayName": "TestProject1",
+      "ColorIndex": 8
+    }
+  },
+  "NextColorIndex": 9
+}

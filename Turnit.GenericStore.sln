@@ -1,12 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Turnit.GenericStore.Api", "Turnit.GenericStore.Api\Turnit.GenericStore.Api.csproj", "{6A3ECB2B-7F0D-45A6-B7DE-71260D96639B}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32002.185
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turnit.GenericStore.Api", "Turnit.GenericStore.Api\Turnit.GenericStore.Api.csproj", "{6A3ECB2B-7F0D-45A6-B7DE-71260D96639B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{0C4DDF70-A894-42BB-A82C-31B340F897E0}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turnit", "Turnit\Turnit.csproj", "{38507849-871C-4379-B1E2-10D1D730A8FD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turnit.Abstraction", "Turnit.Abstraction\Turnit.Abstraction.csproj", "{BB3C90D5-7E08-42F5-BCDD-74D6794F04A0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turnit.Database", "Turnit.Database\Turnit.Database.csproj", "{38DB2580-B7C2-498A-996F-219921F5A264}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turnit.Service", "Turnit.Service\Turnit.Service.csproj", "{71D442CD-C4BA-44F2-B76F-DF31F7928A36}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turnit.Common", "Turnit.Common\Turnit.Common.csproj", "{FD900F1C-C7C0-4BDA-BA91-D6A14A1025DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +31,31 @@ Global
 		{6A3ECB2B-7F0D-45A6-B7DE-71260D96639B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A3ECB2B-7F0D-45A6-B7DE-71260D96639B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A3ECB2B-7F0D-45A6-B7DE-71260D96639B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38507849-871C-4379-B1E2-10D1D730A8FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38507849-871C-4379-B1E2-10D1D730A8FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38507849-871C-4379-B1E2-10D1D730A8FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38507849-871C-4379-B1E2-10D1D730A8FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB3C90D5-7E08-42F5-BCDD-74D6794F04A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB3C90D5-7E08-42F5-BCDD-74D6794F04A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB3C90D5-7E08-42F5-BCDD-74D6794F04A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB3C90D5-7E08-42F5-BCDD-74D6794F04A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38DB2580-B7C2-498A-996F-219921F5A264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38DB2580-B7C2-498A-996F-219921F5A264}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38DB2580-B7C2-498A-996F-219921F5A264}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38DB2580-B7C2-498A-996F-219921F5A264}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71D442CD-C4BA-44F2-B76F-DF31F7928A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71D442CD-C4BA-44F2-B76F-DF31F7928A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71D442CD-C4BA-44F2-B76F-DF31F7928A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71D442CD-C4BA-44F2-B76F-DF31F7928A36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD900F1C-C7C0-4BDA-BA91-D6A14A1025DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD900F1C-C7C0-4BDA-BA91-D6A14A1025DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD900F1C-C7C0-4BDA-BA91-D6A14A1025DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD900F1C-C7C0-4BDA-BA91-D6A14A1025DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58D05C23-CE57-46FE-AE28-353C4E984777}
 	EndGlobalSection
 EndGlobal
