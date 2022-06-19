@@ -11,8 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turnit", "Turnit\Turnit.csproj", "{38507849-871C-4379-B1E2-10D1D730A8FD}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turnit.Abstraction", "Turnit.Abstraction\Turnit.Abstraction.csproj", "{BB3C90D5-7E08-42F5-BCDD-74D6794F04A0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turnit.Database", "Turnit.Database\Turnit.Database.csproj", "{38DB2580-B7C2-498A-996F-219921F5A264}"
@@ -31,10 +29,6 @@ Global
 		{6A3ECB2B-7F0D-45A6-B7DE-71260D96639B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A3ECB2B-7F0D-45A6-B7DE-71260D96639B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A3ECB2B-7F0D-45A6-B7DE-71260D96639B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38507849-871C-4379-B1E2-10D1D730A8FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38507849-871C-4379-B1E2-10D1D730A8FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38507849-871C-4379-B1E2-10D1D730A8FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38507849-871C-4379-B1E2-10D1D730A8FD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BB3C90D5-7E08-42F5-BCDD-74D6794F04A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BB3C90D5-7E08-42F5-BCDD-74D6794F04A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB3C90D5-7E08-42F5-BCDD-74D6794F04A0}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -1,9 +1,10 @@
 ﻿using AutoMapper;
 using Turnit.Abstraction.DTO;
+using Turnit.Abstraction.Entities;
 using Turnit.Abstraction.Services;
 using Turnit.Abstraction.UnitOfWork;
 using Turnit.Common;
-using Turnit.Entities;
+using Turnit.Service.Exceptions;
 
 namespace Turnit.Service.Services;
 
@@ -38,19 +39,27 @@ public class CategoryService : ICategoryService
             Category category = await unitOfWork.CategoryRepository.GetCategoryAsync(categoryId);
             IEnumerable<Product> products = await unitOfWork.ProductRepository.GetProductsByCategoryAsync(categoryId);
 
-            if (!products.Any(x => x.Id.Equals(productId)))
+            if (product is null)
             {
-                unitOfWork.BeginTransaction();
-
-                await unitOfWork.CategoryRepository.AddProductAsync(new ProductCategory
-                {
-                    Id = Guid.NewGuid(),
-                    Category = category,
-                    Product = product
-                });
-
-                await unitOfWork.CommitAsync();
+                throw new NotFoundException($"Product for productId [{productId}] was not found.");
             }
+            if (category is null)
+            {
+                throw new NotFoundException($"Category for categoryId [{categoryId}] was not found.");
+            }
+            if (products.Any(x => x.Id.Equals(productId)))
+            {
+                throw new InvalidOperationException($"Such product [{productId}] already belong to category [{categoryId}].");
+            }
+
+            unitOfWork.BeginTransaction();
+            await unitOfWork.CategoryRepository.AddProductAsync(new ProductCategory
+            {
+                Id = Guid.NewGuid(),
+                Category = category,
+                Product = product
+            });
+            await unitOfWork.CommitAsync();
         }
     }
 
@@ -60,14 +69,14 @@ public class CategoryService : ICategoryService
         {
             ProductCategory productCategory = await unitOfWork.CategoryRepository.GetProductCategoryAsync(categoryId, productId);
 
-            if (productCategory is not null)
+            if (productCategory is null)
             {
-                unitOfWork.BeginTransaction();
-
-                await unitOfWork.CategoryRepository.RemoveProductAsync(productCategory);
-
-                await unitOfWork.CommitAsync();
+                throw new NotFoundException($"ProductCategory for categoryId [{categoryId}] and productId [{productId}] was not found.");
             }
+
+            unitOfWork.BeginTransaction();
+            await unitOfWork.CategoryRepository.RemoveProductAsync(productCategory);
+            await unitOfWork.CommitAsync();
         }
     }
 }

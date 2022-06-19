@@ -1,8 +1,9 @@
 ﻿using Turnit.Abstraction.DTO;
+using Turnit.Abstraction.Entities;
 using Turnit.Abstraction.Services;
 using Turnit.Abstraction.UnitOfWork;
 using Turnit.Common;
-using Turnit.Entities;
+using Turnit.Service.Exceptions;
 
 namespace Turnit.Service.Services;
 
@@ -63,8 +64,6 @@ public class ProductService : IProductService
 
     public async Task BookProductsAsync(Guid productId, IEnumerable<BookDto> bookDto)
     {
-        // TO DO add exception handling in case not existed id were provided
-        // Or Availability < Quantity
         using (var unitOfWork = _unitOfWorkFactory())
         {
             List<ProductAvailability> productAvailabilities = new List<ProductAvailability>();
@@ -72,6 +71,17 @@ public class ProductService : IProductService
             foreach (var book in bookDto)
             {
                 ProductAvailability productAvailability = await unitOfWork.ProductRepository.GetProductAvailabilityAsync(book.StoreId, productId);
+
+                if (productAvailability is null)
+                {
+                    throw new NotFoundException($"ProductAvailability for storeId [{book.StoreId}] and productId [{productId}] was not found.");
+                }
+
+                if (productAvailability.Availability < book.Quantity)
+                {
+                    throw new InvalidOperationException("Quantity of booked product can not be greater then availability.");
+                }
+
                 productAvailability.Availability -= book.Quantity;
                 productAvailabilities.Add(productAvailability);
             }

@@ -1,6 +1,5 @@
 using FluentNHibernate.Mapping;
-using Turnit.Entities;
-
+using Turnit.Abstraction.Entities;
 namespace Turnit.Database.Entities;
 
 public class CategoryMap : ClassMap<Category>

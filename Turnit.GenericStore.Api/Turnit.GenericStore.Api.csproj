@@ -20,7 +20,6 @@
       <ProjectReference Include="..\Turnit.Abstraction\Turnit.Abstraction.csproj" />
       <ProjectReference Include="..\Turnit.Database\Turnit.Database.csproj" />
       <ProjectReference Include="..\Turnit.Service\Turnit.Service.csproj" />
-      <ProjectReference Include="..\Turnit\Turnit.csproj" />
     </ItemGroup>
     
 </Project>

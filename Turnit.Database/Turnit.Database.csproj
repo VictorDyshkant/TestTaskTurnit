@@ -15,7 +15,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Turnit.Abstraction\Turnit.Abstraction.csproj" />
     <ProjectReference Include="..\Turnit.Common\Turnit.Common.csproj" />
-    <ProjectReference Include="..\Turnit\Turnit.csproj" />
   </ItemGroup>
 
 </Project>

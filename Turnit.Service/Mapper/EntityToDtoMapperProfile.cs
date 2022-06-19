@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Turnit.Abstraction.DTO;
-using Turnit.Entities;
+using Turnit.Abstraction.Entities;
 
 namespace Turnit.Service.Mapper;
 

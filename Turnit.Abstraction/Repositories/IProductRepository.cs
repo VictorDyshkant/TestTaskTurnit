@@ -1,4 +1,4 @@
-﻿using Turnit.Entities;
+﻿using Turnit.Abstraction.Entities;
 
 namespace Turnit.Abstraction.Repositories;
 

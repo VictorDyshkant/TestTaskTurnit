@@ -6,5 +6,5 @@ namespace Turnit.GenericStore.Api.Controllers;
 [Produces("application/json")]
 public abstract class ApiControllerBase : ControllerBase
 {
-    
+
 }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Turnit.Abstraction.DTO;
 using Turnit.Abstraction.Services;
 using Turnit.Common;
+using Turnit.GenericStore.Api.Filters;
 using Turnit.GenericStore.Api.Models;
 
 namespace Turnit.GenericStore.Api.Controllers
@@ -33,6 +34,7 @@ namespace Turnit.GenericStore.Api.Controllers
         }
 
         [HttpPost, Route("{storeId:guid}/restock")]
+        [ExceptionHandlingFilter]
         public async Task RestockProducts(Guid storeId, IEnumerable<RestockModel> restockModels)
         {
             IEnumerable<RestockDto> restockDto = _mapper.Map<IEnumerable<RestockDto>>(restockModels);

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Turnit.Abstraction.DTO;
 using Turnit.Abstraction.Services;
 using Turnit.Common;
+using Turnit.GenericStore.Api.Filters;
 using Turnit.GenericStore.Api.Models;
 
 namespace Turnit.GenericStore.Api.Controllers;
@@ -43,18 +44,21 @@ public class ProductsController : ApiControllerBase
     }
 
     [HttpPut, Route("{productId:guid}/category/{categoryId:guid}")]
+    [ExceptionHandlingFilter]
     public async Task AddProductToCategory(Guid productId, Guid categoryId)
     {
         await _categoryService.AddProductToCategory(productId, categoryId);
     }
 
     [HttpDelete, Route("{productId:guid}/category/{categoryId:guid}")]
+    [ExceptionHandlingFilter]
     public async Task DeleteProductFromCategory(Guid productId, Guid categoryId)
     {
         await _categoryService.DeleteProductFromCategory(productId, categoryId);
     }
 
     [HttpPost, Route("{productId:guid}/book")]
+    [ExceptionHandlingFilter]
     public async Task BookProductInStore(Guid productId, IEnumerable<BookModel> bookModels)
     {
         IEnumerable<BookDto> bookDto = _mapper.Map<IEnumerable<BookDto>>(bookModels);

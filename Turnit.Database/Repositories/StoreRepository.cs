@@ -1,7 +1,7 @@
 ﻿using NHibernate;
+using Turnit.Abstraction.Entities;
 using Turnit.Abstraction.Repositories;
 using Turnit.Common;
-using Turnit.Entities;
 
 namespace Turnit.Database.Repositories;
 
